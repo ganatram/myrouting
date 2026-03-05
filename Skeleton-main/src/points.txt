@@ -14,3 +14,58 @@ Lazy loading
 npm i react-router-dom
 
 
+
+
+
+
+A,B,C's of routing : 
+
+            Hashbang 
+            RouterTree 
+            Routing Placeholder 
+
+
+example.com/inventory
+
+
+// step 1 - Hashbang - programmatically making state changes(via events) to the BrowserURLstate 
+
+first - navigation - 'how the developer expects end user's to navigate 
+
+  Non React syntax :
+    DOM : <a href="#products"> click here </a>
+
+    React syntax:
+
+      import {Link,NavLink} from 'react-router-dom' 
+
+    <Link to="products" > go to products </Link>
+    <NavLink to="products" > go to products </NavLink>
+
+
+
+//step 2 
+
+React's Router : - generates a RouterTree - track the BrowserURL state and accordingly serves a component 
+
+import {createBrowserRouter,RouterProvider} from 'react-router-com'; 
+
+    const myRouterTree = createBrowserRouter([  // array of route objects 
+        {  // route object
+            path:'inventory', // tracks the BrowserURL state 
+            element:<InventoryPage/>
+
+    },
+    {  // route object 
+          path:'sales', // tracks the BrowserURL state 
+            element:<SalesPage/>
+    }])
+
+
+//step 3
+
+    Routing Placeholder -  'accomodates a component provided by the RouterTree' 
+    
+       <RouterProvider router={myRouterTree} />   
+
+   
