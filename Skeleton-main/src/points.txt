@@ -1,0 +1,16 @@
+Introducing React router
+Declaring Routes 
+Creating Navigation 
+Nested Routes 
+Route Parameters 
+Error page 
+Index Route 
+Search parameters 
+Navigating programmatically 
+Form Navigation 
+Lazy loading 
+
+
+npm i react-router-dom
+
+
