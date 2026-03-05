@@ -6,7 +6,7 @@ export function App() {
   return (
     <>
       <Header />;
-      <Outlet />; // routing placeholder - accomodates component from children:[{},{}]
+      <Outlet />;
     </>
   );
 }

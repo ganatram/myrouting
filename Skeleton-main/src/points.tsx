@@ -1,17 +1,40 @@
-// import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
+// // import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
+
+// import { createBrowserRouter, useParams } from 'react-router-dom';
+
+// // const myRouterTree = createBrowserRouter([
+// //   {
+// //     path: 'customer',
+// //     element: <Customer />,
+// //     children: [
+// //       { path: 'profile', element: <CustomerProfile /> },
+// //       { path: 'tasks', element: <CustomerTasks /> },
+// //     ],
+// //   },
+// //   {},
+// // ]);
+
+// // <RouterProvider router={myRouterTree}/>
+
+// // <Outlet />;
+
+// // Route Parameters : 'segment in the path that varies'
+
+// // example.com/customer/123/tasks/abc
 
 // const myRouterTree = createBrowserRouter([
 //   {
-//     path: 'customer',
-//     element: <Customer />,
-//     children: [
-//       { path: 'profile', element: <CustomerProfile /> },
-//       { path: 'tasks', element: <CustomerTasks /> },
-//     ],
+//     path: '/customer/:id/tasks/:taskid', //  {id:123,taskid:'abc}
 //   },
 //   {},
 // ]);
 
-// <RouterProvider router={myRouterTree}/>
+// // how do components access the route parameters ? useParams() hook !
 
-// <Outlet />;
+// export function Examplecomponent() {
+//   const params = useParams(); // returns {id:123,taskid:'abc}
+
+//   console.log(params); // {id:123,taskid:'abc}
+//   console.log(params.id); // 123
+//   console.log(params.taskid); //'abc'
+// }

@@ -1,4 +1,4 @@
-Introducing React router
+<!-- Introducing React router
 Declaring Routes
 Creating Navigation
 Nested Routes
@@ -58,3 +58,12 @@ import {createBrowserRouter,RouterProvider} from 'react-router-com';
        <RouterProvider router={myRouterTree} />
 
 Nested routes :
+
+import {createBrowserRouter} from 'react-router-dom
+
+    const myRouterTree = createBrowserRouter([{
+        path:'customer',
+        element:<Customer/>,
+        children:[]
+
+    },{}]) -->
