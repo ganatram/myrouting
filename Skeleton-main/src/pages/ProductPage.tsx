@@ -8,6 +8,8 @@ type Params = {
 export function ProductPage() {
   const params = useParams<Params>(); // -- query your RouteParams - return {id:1}
 
+  console.log(params); // to get access to the object with properties (every route parameter is wrapped as a property in this object)
+
   const id = params.id === undefined ? undefined : parseInt(params.id); // 1
 
   const product = products.find((product) => product.id === id); // corrensponding record based on product id
