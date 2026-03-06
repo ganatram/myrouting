@@ -3,16 +3,16 @@ import logo from './logo.svg';
 import { FormEvent } from 'react';
 
 export function Header() {
-  const [searchParams, setSearchParams] = useSearchParams(); // {prop1:'',prop2:''}
+  const [searchParams, setSearchParams] = useSearchParams(); // {}
 
   function handleSearchSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault(); // it disable some nuance events when the form gets submitted
     console.log('form submit callback invoked');
     // FormData API - native api - Browser feature - meant to collect data from from controls
     const formData = new FormData(e.currentTarget);
-    const search = formData.get('search') as string;
-    console.log(search);
-    setSearchParams({ search });
+    const x = formData.get('tf1') as string; //'Tailwind'
+    console.log(x);
+    setSearchParams({ x }); // .com/?x=Tailwind
   }
 
   return (
@@ -22,7 +22,7 @@ export function Header() {
           type="search"
           placeholder="please type a value"
           defaultValue={searchParams.get('search') ?? ''}
-          name="search"
+          name="tf1"
           className="absolute right-0 top-0 rounded py-2 px-3 text-black"
         />
       </form>
