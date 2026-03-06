@@ -6,13 +6,13 @@ type Params = {
   x: string;
 };
 export function ProductPage() {
-  const params = useParams<Params>(); // -- query your RouteParams - return {id:1}
+  const params = useParams<Params>(); // -- query your RouteParams - return {id:2}
 
-  console.log(params); // to get access to the object with properties (every route parameter is wrapped as a property in this object)
+  console.log(params); // to get access to the object with properties (every route parameter is wrapped as a property in this object) - {id:2}
 
-  const id = params.id === undefined ? undefined : parseInt(params.id); // 1
+  const id = params.id === undefined ? undefined : parseInt(params.id); // 2
 
-  const product = products.find((product) => product.id === id); // corrensponding record based on product id
+  const product = products.find((product) => product.id === id); // corrensponding record based on product id - 2
 
   return (
     <div className="text-center p-5 text-xl">
