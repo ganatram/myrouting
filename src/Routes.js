@@ -1,17 +1,21 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import { ProductsPage } from "./pages/ProductsPage";
-import { Header } from "./Header";
+import { App } from "./App";
 
 const myRouter = createBrowserRouter([
-  // RouterTree - array of route objects
+  // RouterTree (root level)
   {
     path: "/", // tracks the BrowserUrl state
-    element: <Header />, // renders a particular component
-  },
-  {
-    path: "products", // tracks the BrowserUrl state
-    element: <ProductsPage />, // renders a particular component
+    element: <App />, // renders a particular component
+    children: [
+      // RouterTree (nested level)
+      {
+        path: "products",
+        element: <ProductsPage />,
+      },
+      {},
+    ],
   },
 ]);
 
