@@ -15,6 +15,10 @@ const myRouter = createBrowserRouter([
     children: [
       // RouterTree (nested level)
       {
+        index: true,
+        element: <HomePage />,
+      },
+      {
         path: "products",
         element: <ProductsPage />,
       },
