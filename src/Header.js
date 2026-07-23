@@ -5,7 +5,7 @@ export function Header() {
     <header>
       <h1>React Tools</h1>
       <nav>
-        <Link to="products">Go to products</Link>
+        <Link to="products"> Go to products </Link>
       </nav>
     </header>
   );
