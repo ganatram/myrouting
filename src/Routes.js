@@ -8,7 +8,7 @@ import { HomePage } from "./pages/HomePage";
 
 import { lazy, Suspense } from "react";
 
-const lazyPage = lazy(() => import("./pages/Admin/AdminPage"));
+const AdminPage = lazy(() => import("./pages/Admin/AdminPage"));
 
 const myRouter = createBrowserRouter([
   // RouterTree (root level)
@@ -35,7 +35,7 @@ const myRouter = createBrowserRouter([
         path: "admin",
         element: (
           <Suspense fallback={<div> loading ... </div>}>
-            <lazyPage />
+            <AdminPage />
           </Suspense>
         ),
       },
