@@ -1,0 +1,42 @@
+
+
+
+
+index 
+
+        <Routes />  
+
+
+                 <App />
+
+                  
+                          <Header />
+
+
+
+                          Route Parameters 
+
+                          // localhost:3000/customer/100/500
+
+
+                          {
+                            path:'/customer/:id/:taskId',    // shared object {id:100,taskId:500}
+                            element:<SomeComponent/>
+                          }
+
+
+
+                          // comp1 
+
+                          import {useParams} from 'react-router-dom'
+
+                            export function Comp1(){
+
+                              const Params =  useParams();  // {id:100,taskId:500}
+
+                                return
+                                <>
+                                 <div> {Params.id} </div>
+                                <div> {Params.taskId} </div>
+                                </>
+                            }

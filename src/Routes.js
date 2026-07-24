@@ -4,6 +4,7 @@ import { ProductsPage } from "./pages/ProductsPage";
 import { App } from "./App";
 import { ProductPage } from "./pages/ProductPage";
 import { ErrorPage } from "./pages/ErrorPage";
+import { HomePage } from "./pages/HomePage";
 
 const myRouter = createBrowserRouter([
   // RouterTree (root level)
