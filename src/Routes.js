@@ -24,9 +24,13 @@ const myRouter = createBrowserRouter([
         element: <ProductsPage />,
       },
       {
-        path: "products/:id", // shared Object {id:5}
+        path: "products/:id", // shared Object {id:3}
         element: <ProductPage />,
       },
+      /*  {
+        path: "*", 
+        element: <DefaultErrorComponent />,
+      }, */
     ],
   },
 ]);
