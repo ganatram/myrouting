@@ -6,6 +6,10 @@ import { ProductPage } from "./pages/ProductPage";
 import { ErrorPage } from "./pages/ErrorPage";
 import { HomePage } from "./pages/HomePage";
 
+import { lazy, Suspense } from "react";
+
+const lazyPage = lazy(() => import("./pages/Admin/AdminPage"));
+
 const myRouter = createBrowserRouter([
   // RouterTree (root level)
   {
@@ -27,10 +31,14 @@ const myRouter = createBrowserRouter([
         path: "products/:id", // shared Object {id:3}
         element: <ProductPage />,
       },
-      /*  {
-        path: "*", 
-        element: <DefaultErrorComponent />,
-      }, */
+      {
+        path: "admin",
+        element: (
+          <Suspense fallback={<div> loading ... </div>}>
+            <lazyPage />
+          </Suspense>
+        ),
+      },
     ],
   },
 ]);
